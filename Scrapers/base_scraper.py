@@ -15,10 +15,10 @@ class BaseScraper(ABC):
             async with async_playwright() as p_wright:
                 # Launch the browser
                 await self.open_browser(p_wright)
+                await self.page_setup()
                 await self.accept_cookies()
         except Exception as e:
             self.logger.error(f"Error in run_scraper: {e}. URL: {self.url}")
-            raise
 
     async def open_browser(self, p_wright):
         try:
@@ -27,11 +27,24 @@ class BaseScraper(ABC):
             await self.page.goto(self.url)
         except Exception as e:
             self.logger.error(f"Failed to open browser: {e}. URL: {self.url}")
-            raise
+    
+    async def page_setup(self):
+        try:
+            await self.page.set_default_timeout(10000)
+            await self.page.set_default_navigation_timeout(10000)
+        except Exception as e:
+            self.logger.error(f"Failed to set up page: {e}. URL: {self.url}")
     
     async def accept_cookies(self):
-        await self.page.locator(f"text={self.cookies_button_selector}").click()
+        try:
+            await self.page.locator(f"text={self.cookies_button_selector}").click()
+        except Exception as e:
+            self.logger.error(f"Failed to accept cookies: {e}. URL: {self.url}")
 
+    async def select_city(self, city_locator):
+        try:
+            await self.page.locator(city_locator).click()
+            await self.page.wait_for_timeout(2000)  # Wait for the city selection to take effect
 
     async def close_browser(self):
         if self.browser:
