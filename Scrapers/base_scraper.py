@@ -20,6 +20,7 @@ class BaseScraper(ABC):
                     await self.open_browser(p_wright)
                     self.page_setup()
                     await self.accept_cookies()
+                    await self.select_city(self.city_name)
             except Exception as e:
                 self.logger.error(f"Error in run_scraper (Attempt {attempt}): {e}. URL: {self.url}")
                 if attempt == 3: 
@@ -47,12 +48,14 @@ class BaseScraper(ABC):
         except Exception as e:
             self.logger.error(f"Failed to accept cookies: {e}. URL: {self.url}")
 
-    async def select_city(self, city_locator):
-        try:
-            await self.page.locator(city_locator).click()
-            await self.page.wait_for_timeout(2000)  # Wait for the city selection to take effect
-        except Exception as e:
-            self.logger.error(f"Failed to select city: {e}. URL: {self.url}")
+    @abstractmethod
+    async def select_city(self, city_name):
+        """
+        Abstract method to select a city on the page.
+        Implemented in the derived class.
+        """
+        pass
+
 
     async def close_browser(self):
         if self.browser:
