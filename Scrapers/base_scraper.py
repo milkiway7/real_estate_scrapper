@@ -56,6 +56,8 @@ class BaseScraper(ABC):
         """
         pass
 
+    async def wait_for_element(self):
+        await self.page.wait_for_timeout(1500)  
 
     async def close_browser(self):
         if self.browser:
