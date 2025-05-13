@@ -19,10 +19,15 @@ class OtoDomScraper(BaseScraper):
             await self.page.keyboard.press("Escape")
             await self.wait_for_element() 
             await self.page.locator(OTODOM_CONFIGURATION["selectors"]["search_button"]).click()
-            a = 1
         except Exception as e:
             self.logger.error(f"Failed to select city: {e}. URL: {self.url}")
 
-        
+    async def filter_results(self):
+        container = self.page.locator('[data-sentry-component="DropdownSorting"]')
+        dropdown = container.locator('[data-cy="dropdown"]')
+        await dropdown.click()
+        self.wait_for_element()
+        await self.page.locator(OTODOM_CONFIGURATION["selectors"]["filter_newest"]).click()
+        a = 1
 
 

@@ -21,6 +21,7 @@ class BaseScraper(ABC):
                     self.page_setup()
                     await self.accept_cookies()
                     await self.select_city(self.city_name)
+                    await self.filter_results()
             except Exception as e:
                 self.logger.error(f"Error in run_scraper (Attempt {attempt}): {e}. URL: {self.url}")
                 if attempt == 3: 
@@ -52,6 +53,14 @@ class BaseScraper(ABC):
     async def select_city(self, city_name):
         """
         Abstract method to select a city on the page.
+        Implemented in the derived class.
+        """
+        pass
+    
+    @abstractmethod
+    async def filter_results(self):
+        """
+        Abstract method to filter results on the page.
         Implemented in the derived class.
         """
         pass
