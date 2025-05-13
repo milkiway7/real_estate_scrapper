@@ -22,6 +22,10 @@ class BaseScraper(ABC):
                     await self.accept_cookies()
                     await self.select_city(self.city_name)
                     await self.filter_results()
+                    await self.scrape_offers()
+                    self.logger.info(f"Scraping completed successfully for {self.city_name}. URL: {self.url}")
+                    await self.close_browser()
+                    break  # Exit the loop if successful
             except Exception as e:
                 self.logger.error(f"Error in run_scraper (Attempt {attempt}): {e}. URL: {self.url}")
                 if attempt == 3: 
@@ -61,6 +65,14 @@ class BaseScraper(ABC):
     async def filter_results(self):
         """
         Abstract method to filter results on the page.
+        Implemented in the derived class.
+        """
+        pass
+    
+    @abstractmethod
+    async def scrape_offers(self):
+        """
+        Abstract method to scrape offers from the page.
         Implemented in the derived class.
         """
         pass

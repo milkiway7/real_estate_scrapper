@@ -23,11 +23,27 @@ class OtoDomScraper(BaseScraper):
             self.logger.error(f"Failed to select city: {e}. URL: {self.url}")
 
     async def filter_results(self):
-        container = self.page.locator('[data-sentry-component="DropdownSorting"]')
-        dropdown = container.locator('[data-cy="dropdown"]')
-        await dropdown.click()
-        self.wait_for_element()
-        await self.page.locator(OTODOM_CONFIGURATION["selectors"]["filter_newest"]).click()
-        a = 1
+        try:
+            container = self.page.locator('[data-sentry-component="DropdownSorting"]')
+            dropdown = container.locator('[data-cy="dropdown"]')
+            await dropdown.click()
+            await self.wait_for_element()
+            await self.page.locator(OTODOM_CONFIGURATION["selectors"]["filter_newest"]).click()
+        except Exception as e:
+            self.logger.error(f"Failed to filter results: {e}. URL: {self.url}")
+
+    async def scrape_offers(self):
+        try:
+            offers_lists = self.page.locator(OTODOM_CONFIGURATION["selectors"]["offets_list"])
+            lists_count = await offers_lists.count()
+            for list in range(lists_count):
+                current_list = offers_lists.nth(list)
+                offers_items = current_list.locator("li")
+                offers_count = await offers_items.count()
+                print(f"Lista {list}: {offers_count} elementów")
+            a=1
+        except Exception as e:
+            self.logger.error(f"Failed to run offers scrape loop: {e}. URL: {self.url}")
+
 
 
