@@ -9,6 +9,7 @@ class BaseScraper(ABC):
         self.browser = None
         self.page = None
         self.url = url
+        self.isSuccess = True
         self.logger = get_logger(self.__class__.__name__)
 
     async def run_scraper(self):
@@ -19,13 +20,18 @@ class BaseScraper(ABC):
                     # Launch the browser
                     await self.open_browser(p_wright)
                     self.page_setup()
-                    await self.accept_cookies()
+                    await self.accept_cookies(self.page)
                     await self.select_city(self.city_name)
                     await self.filter_results()
                     await self.scrape_offers()
-                    self.logger.info(f"Scraping completed successfully for {self.city_name}. URL: {self.url}")
-                    await self.close_browser()
-                    break  # Exit the loop if successful
+                # RETURN BOOL OR STH TO CHECK IF REALLY COMPLETED BCS NOW IT LOG SUCCES EVEN IF ERROR
+                    if self.isSuccess:
+                        self.logger.info(f"Scraping completed successfully for {self.city_name}. URL: {self.url}")
+                        await self.close_browser()
+                        break  # Exit the loop if successful
+                    else:
+                        self.logger.error(f"Failed after 3 attempts. URL: {self.url}")
+                        
             except Exception as e:
                 self.logger.error(f"Error in run_scraper (Attempt {attempt}): {e}. URL: {self.url}")
                 if attempt == 3: 
@@ -47,9 +53,9 @@ class BaseScraper(ABC):
         except Exception as e:
             self.logger.error(f"Failed to set up page: {e}. URL: {self.url}")
     
-    async def accept_cookies(self):
+    async def accept_cookies(self, page):
         try:
-            await self.page.locator(f"text={self.cookies_button_selector}").click()
+            await page.locator(f"text={self.cookies_button_selector}").click()
         except Exception as e:
             self.logger.error(f"Failed to accept cookies: {e}. URL: {self.url}")
 
