@@ -2,6 +2,7 @@ from abc import ABC, abstractmethod
 from playwright.async_api  import async_playwright
 from Helpers.logger import get_logger
 import asyncio  
+from datetime import datetime
 
 class BaseScraper(ABC):
     def __init__(self, url, cookies_button_selector):
@@ -14,6 +15,7 @@ class BaseScraper(ABC):
 
     async def run_scraper(self):
         # Retry 3 times if the scraper fails
+        start = datetime.now()
         for attempt in range(1, 4):
             try:
                 async with async_playwright() as p_wright:
@@ -26,16 +28,23 @@ class BaseScraper(ABC):
                     await self.scrape_offers()
                 # RETURN BOOL OR STH TO CHECK IF REALLY COMPLETED BCS NOW IT LOG SUCCES EVEN IF ERROR
                     if self.isSuccess:
-                        self.logger.info(f"Scraping completed successfully for {self.city_name}. URL: {self.url}")
+                        end = datetime.now()
+                        elapsed = end - start
+                        self.logger.info(f"Scraping completed successfully for {self.city_name}, time elapsed:{elapsed.total_seconds() / 60:.2f} min. URL: {self.url}")
                         await self.close_browser()
+
                         break  # Exit the loop if successful
                     else:
-                        self.logger.error(f"Failed after 3 attempts. URL: {self.url}")
+                        end = datetime.now()
+                        elapsed = end - start
+                        self.logger.error(f"Failed after 3 attempts, time elapsed:{elapsed.total_seconds() / 60:.2f} min. URL: {self.url}")
                         
             except Exception as e:
+                end = datetime.now()
+                elapsed = end - start
                 self.logger.error(f"Error in run_scraper (Attempt {attempt}): {e}. URL: {self.url}")
                 if attempt == 3: 
-                    self.logger.error(f"Failed after 3 attempts. URL: {self.url}")
+                    self.logger.error(f"Failed after 3 attempts, time elapsed:{elapsed.total_seconds() / 60:.2f} min. URL: {self.url}")
                 await asyncio.sleep(2)  
 
     async def open_browser(self, p_wright):
@@ -48,8 +57,8 @@ class BaseScraper(ABC):
     
     def page_setup(self):
         try:
-            self.page.set_default_timeout(10000)
-            self.page.set_default_navigation_timeout(10000)
+            self.page.set_default_timeout(30000)
+            self.page.set_default_navigation_timeout(30000)
         except Exception as e:
             self.logger.error(f"Failed to set up page: {e}. URL: {self.url}")
     
