@@ -6,6 +6,7 @@ class OtoDomScraper(BaseScraper):
         self.city_name = city_name 
         self.offer_page = None
         self.configuration_selectors = OTODOM_CONFIGURATION["selectors"]
+        self.configuration_offert_selectors = OTODOM_CONFIGURATION["selectors"]["offert"]
         self.json_data = otodom_data_structure
         super().__init__(OTODOM_CONFIGURATION["url"],OTODOM_CONFIGURATION["cookies_button_selector"])
 
@@ -99,28 +100,26 @@ class OtoDomScraper(BaseScraper):
         try:
             # Scrape data from the offer page
             self.json_data["url"] = self.offer_page.url
-            self.json_data["title"] = await self.offer_page.locator(OTODOM_CONFIGURATION["selectors"]) # Add the correct selector for title
-            self.json_data["address"] = None  # Add the correct selector for address
-            self.json_data["price"] = None  # Add the correct selector for price
-            self.json_data["offer_type"] = None  # Add the correct selector for offer type
-            self.json_data["area"] = None  # Add the correct selector for area
-            self.json_data["rooms"] = None  # Add the correct selector for rooms
-            self.json_data["heating"] = None  # Add the correct selector for heating
-            self.json_data["floor"] = None  # Add the correct selector for floor
-            self.json_data["rent"] = None  # Add the correct selector for rent
-            self.json_data["building_condition"] = None  # Add the correct selector for building condition
-            self.json_data["market"] = None  # Add the correct selector for market
-            self.json_data["ownership_form"] = None  # Add the correct selector for ownership form
-            self.json_data["available"] = None  # Add the correct selector for available
-            self.json_data["additional_info"] = None  # Add the correct selector for additional info
-            self.json_data["construction_year"] = None  # Add the correct selector for construction year
-            self.json_data["elevator"] = None  # Add the correct selector for elevator
-            self.json_data["windows"] = None  # Add the correct selector for windows
-            self.json_data["energy_certificate"] = None  # Add the correct selector for energy certificate
-            self.json_data["equipment"] = None  # Add the correct selector for equipment
-            self.json_data["description"] = None  # Add the correct selector for description
+            self.json_data["title"] = await self.offer_page.locator(self.configuration_offert_selectors["title"]).inner_text() # Add the correct selector for title
+            self.json_data["address"] = await self.offer_page.locator(self.configuration_offert_selectors["address"]).inner_text() # Add the correct selector for address
+            self.json_data["price"] = await self.offer_page.locator(self.configuration_offert_selectors["price"]).inner_text() # Add the correct selector for price
+            self.json_data["price_per_m2"] = await self.offer_page.locator(self.configuration_offert_selectors["price_per_m2"]).inner_text() # Add the correct selector for price per m2
             a = 1
             # Add more fields as needed
         except Exception as e:
             self.logger.error(f"Failed to scrape data: {e}. URL: {self.offer_page.url}")
             self.isSuccess = False
+
+        async def get_details_info(self):
+            try:
+                details_container = self.offer_page.locator(self.configuration_offert_selectors["info_container"])
+                details_count = await details_container.count()
+                for detail_index in range(details_count):
+                    detail = details_container.nth(detail_index)
+                    detail_name = await detail.locator("span").first.inner_text()
+                    detail_value = await detail.locator("span").nth(1).inner_text()
+                    if detail_name in self.json_data:
+                        self.json_data[detail_name] = detail_value
+            except Exception as e:
+                self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")
+                self.isSuccess = False
