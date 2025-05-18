@@ -33,7 +33,7 @@ class OtoDomScraper(BaseScraper):
             dropdown = container.locator('[data-cy="dropdown"]')
             await dropdown.click()
             await self.wait_for_element()
-            await self.page.locator(self.configuration_selectors["filter_newest"]).click()
+            await self.page.locator(self.configuration_selectors["filter_newest"]).click(timeout=5000)
         except Exception as e:
             self.logger.error(f"Failed to filter results: {e}. URL: {self.url}")
             self.isSuccess = False
@@ -89,7 +89,7 @@ class OtoDomScraper(BaseScraper):
         
     async def go_to_next_page(self):
         try:
-            next_button = self.page.locator(self)
+            next_button = self.page.locator(self.configuration_selectors["next_page_button"])
             if await next_button.is_visible():
                 await next_button.scroll_into_view_if_needed()
                 await next_button.click()
@@ -138,7 +138,7 @@ class OtoDomScraper(BaseScraper):
         try:
             for detail in self.configuration_offert_selectors["details_table"]:
                 detail_value_label = self.offer_page.locator("p", has_text=self.configuration_offert_selectors["details_table"][detail])
-                detail_value = await detail_value_label.locator("xpath=following-sibling::p[1]").inner_text()
+                detail_value = await detail_value_label.locator("xpath=following-sibling::p[1]").first.inner_text()
                 self.json_data[detail] = detail_value
             a =1
         except Exception as e:
