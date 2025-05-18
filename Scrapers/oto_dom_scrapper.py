@@ -1,13 +1,12 @@
 from Scrapers.base_scraper import BaseScraper
 from ScrappersConfiguration.otodom_configuration import OTODOM_CONFIGURATION
-from Api.ApiDataStructure.oto_dom_data_structure import otodom_data_structure
 class OtoDomScraper(BaseScraper):
     def __init__(self, city_name):
         self.city_name = city_name 
         self.offer_page = None
         self.configuration_selectors = OTODOM_CONFIGURATION["selectors"]
         self.configuration_offert_selectors = OTODOM_CONFIGURATION["selectors"]["offert"]
-        self.json_data = otodom_data_structure
+        self.json_data = None
         super().__init__(OTODOM_CONFIGURATION["url"],OTODOM_CONFIGURATION["cookies_button_selector"])
 
     async def run_oto_dom_scraper(self):
@@ -26,16 +25,18 @@ class OtoDomScraper(BaseScraper):
             await self.page.locator(self.configuration_selectors["search_button"]).click()
         except Exception as e:
             self.logger.error(f"Failed to select city: {e}. URL: {self.url}")
+            self.isSuccess = False
 
     async def filter_results(self):
         try:
-            container = self.page.locator([self.configuration_selectors["filter_button_container"]])
-            dropdown = container.locator(self.configuration_selectors["filter_button"])
+            container = self.page.locator('[data-sentry-component="DropdownSorting"]')
+            dropdown = container.locator('[data-cy="dropdown"]')
             await dropdown.click()
             await self.wait_for_element()
             await self.page.locator(self.configuration_selectors["filter_newest"]).click()
         except Exception as e:
             self.logger.error(f"Failed to filter results: {e}. URL: {self.url}")
+            self.isSuccess = False
 
     async def scrape_offers(self):
         try:
@@ -54,6 +55,7 @@ class OtoDomScraper(BaseScraper):
                         await self.go_to_next_page()
         except Exception as e:
             self.logger.error(f"Failed to run offers scrape loop: {e}. URL: {self.url}")
+            self.isSuccess = False
         
     async def open_offers(self, offers_items):
         try:
@@ -99,27 +101,46 @@ class OtoDomScraper(BaseScraper):
     async def scrap_data(self):
         try:
             # Scrape data from the offer page
-            self.json_data["url"] = self.offer_page.url
-            self.json_data["title"] = await self.offer_page.locator(self.configuration_offert_selectors["title"]).inner_text() # Add the correct selector for title
-            self.json_data["address"] = await self.offer_page.locator(self.configuration_offert_selectors["address"]).inner_text() # Add the correct selector for address
-            self.json_data["price"] = await self.offer_page.locator(self.configuration_offert_selectors["price"]).inner_text() # Add the correct selector for price
-            self.json_data["price_per_m2"] = await self.offer_page.locator(self.configuration_offert_selectors["price_per_m2"]).inner_text() # Add the correct selector for price per m2
-            a = 1
+            self.json_data = {
+                "url": self.offer_page.url,
+                "title": await self.offer_page.locator(self.configuration_offert_selectors["title"]).inner_text(),
+                "address": await self.offer_page.locator(self.configuration_offert_selectors["address"]).inner_text(),
+                "price": await self.offer_page.locator(self.configuration_offert_selectors["price"]).inner_text(),
+                "price_per_m2": await self.offer_page.locator(self.configuration_offert_selectors["price_per_m2"]).inner_text(),
+
+                "offer_type": "",
+                "company": "",
+                "area": "",
+                "rooms": "",
+                "heating": "",
+                "floor": "",
+                "rent": "",
+                "building_condition": "",
+                "market": "",
+                "ownership_form": "",
+                "available_from": "",
+                "additional_info": "",
+
+                "construction_year": "",
+                "elevator": "",
+                "windows": "",
+                "energy_certificate": "",
+                "equipment": "",
+                "description": ""
+            }
+            await self.get_details_info()
             # Add more fields as needed
         except Exception as e:
             self.logger.error(f"Failed to scrape data: {e}. URL: {self.offer_page.url}")
             self.isSuccess = False
 
-        async def get_details_info(self):
-            try:
-                details_container = self.offer_page.locator(self.configuration_offert_selectors["info_container"])
-                details_count = await details_container.count()
-                for detail_index in range(details_count):
-                    detail = details_container.nth(detail_index)
-                    detail_name = await detail.locator("span").first.inner_text()
-                    detail_value = await detail.locator("span").nth(1).inner_text()
-                    if detail_name in self.json_data:
-                        self.json_data[detail_name] = detail_value
-            except Exception as e:
-                self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")
-                self.isSuccess = False
+    async def get_details_info(self):
+        try:
+            for detail in self.configuration_offert_selectors["details_table"]:
+                detail_value_label = self.offer_page.locator("p", has_text=self.configuration_offert_selectors["details_table"][detail])
+                detail_value = await detail_value_label.locator("xpath=following-sibling::p[1]").inner_text()
+                self.json_data[detail] = detail_value
+            a =1
+        except Exception as e:
+            self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")
+            self.isSuccess = False
