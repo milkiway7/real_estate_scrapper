@@ -107,27 +107,15 @@ class OtoDomScraper(BaseScraper):
                 "address": await self.offer_page.locator(self.configuration_offert_selectors["address"]).inner_text(),
                 "price": await self.offer_page.locator(self.configuration_offert_selectors["price"]).inner_text(),
                 "price_per_m2": await self.offer_page.locator(self.configuration_offert_selectors["price_per_m2"]).inner_text(),
-
-                "offer_type": "",
-                "company": "",
-                "area": "",
-                "rooms": "",
-                "heating": "",
-                "floor": "",
-                "rent": "",
-                "building_condition": "",
-                "market": "",
-                "ownership_form": "",
-                "available_from": "",
-                "additional_info": "",
-
-                "construction_year": "",
-                "elevator": "",
-                "windows": "",
-                "energy_certificate": "",
-                "equipment": "",
-                "description": ""
+                # "construction_year": "",
+                # "elevator": "",
+                # "windows": "",
+                # "energy_certificate": "",
+                # "equipment": "",
+                "description": await self.get_description(),
             }
+            # ADD COMPANY IF EXSIST
+            
             await self.get_details_info()
             # Add more fields as needed
         except Exception as e:
@@ -140,7 +128,14 @@ class OtoDomScraper(BaseScraper):
                 detail_value_label = self.offer_page.locator("p", has_text=self.configuration_offert_selectors["details_table"][detail])
                 detail_value = await detail_value_label.locator("xpath=following-sibling::p[1]").first.inner_text()
                 self.json_data[detail] = detail_value
-            a =1
         except Exception as e:
             self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")
+            self.isSuccess = False
+    
+    async def get_description(self):
+        try:
+            description =  await self.offer_page.locator("div[data-cy='adPageAdDescription']").inner_text()
+            return description
+        except Exception as e:
+            self.logger.error(f"Failed to get description: {e}. URL: {self.offer_page.url}")
             self.isSuccess = False
