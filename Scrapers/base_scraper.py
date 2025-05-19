@@ -25,6 +25,7 @@ class BaseScraper(ABC):
                     await self.accept_cookies(self.page)
                     await self.select_city(self.city_name)
                     await self.filter_results()
+                    await self.wait_for_element()
                     await self.scrape_offers()
                 # RETURN BOOL OR STH TO CHECK IF REALLY COMPLETED BCS NOW IT LOG SUCCES EVEN IF ERROR
                     if self.isSuccess:
@@ -55,18 +56,28 @@ class BaseScraper(ABC):
         except Exception as e:
             self.logger.error(f"Failed to open browser: {e}. URL: {self.url}")
     
+    async def accept_cookies(self, page):
+        try:
+            await page.locator(f"text={self.cookies_button_selector}").click()
+        except Exception as e:
+            self.logger.error(f"Failed to accept cookies: {e}. URL: {self.url}")
+
+    async def wait_for_element(self):
+        await self.page.wait_for_timeout(1500)  
+
+    async def close_browser(self):
+        if self.browser:
+            await self.browser.close()
+            self.browser = None
+        else:
+            print("Browser is not open.")
+    
     def page_setup(self):
         try:
             self.page.set_default_timeout(30000)
             self.page.set_default_navigation_timeout(30000)
         except Exception as e:
             self.logger.error(f"Failed to set up page: {e}. URL: {self.url}")
-    
-    async def accept_cookies(self, page):
-        try:
-            await page.locator(f"text={self.cookies_button_selector}").click()
-        except Exception as e:
-            self.logger.error(f"Failed to accept cookies: {e}. URL: {self.url}")
 
     @abstractmethod
     async def select_city(self, city_name):
@@ -91,14 +102,3 @@ class BaseScraper(ABC):
         Implemented in the derived class.
         """
         pass
-
-    async def wait_for_element(self):
-        await self.page.wait_for_timeout(1500)  
-
-    async def close_browser(self):
-        if self.browser:
-            await self.browser.close()
-            self.browser = None
-        else:
-            print("Browser is not open.")
-
