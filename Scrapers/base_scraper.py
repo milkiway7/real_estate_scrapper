@@ -11,6 +11,7 @@ class BaseScraper(ABC):
         self.page = None
         self.url = url
         self.isSuccess = True
+        self.offers = []
         self.logger = get_logger(self.__class__.__name__)
 
     async def run_scraper(self):

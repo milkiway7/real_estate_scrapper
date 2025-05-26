@@ -1,9 +1,11 @@
 import asyncio
 from Scrapers.oto_dom_scrapper import OtoDomScraper
-
+from Api.send_data_client import SendDataClient
 async def main():
     oto_dom_scraper = OtoDomScraper("Kraków")
     await oto_dom_scraper.run_oto_dom_scraper()
-
+    # send = SendDataClient()
+    # await send.send_data_to_analysis("[{'url': 'https://www.otodom.pl/pl/oferta/mieszkanie-3-pokojowe-61m-osobna-kuchnia-loggia-garaz-schowek-ID4vxbR', 'title': 'Mieszkanie 3 pokojowe 61m, osobna kuchnia+loggia+garaż+schowek', 'address': 'ul. Bolesława Orlińskiego, Czyżyny, Czyżyny, Kraków, małopolskie', 'price': '1 129 000 zł', 'price_per_m2': '18 508 zł/m²', 'description': 'Na sprzedaż ustawne, 3-pokojowe mieszkanie z dużym balkonem i widokiem na zielony skwer! Bezpośrednio od właściciela.\n\nLOKALIZACJA:\n\nNieruchomość znajduje się przy ul. Bolesława Orlińskiego, w dzielnicy Czyżyny. Mieszkanie położone na 7 piętrze (ostatnim)\n\nW pobliżu:\n\nszkoły, przedszkola i żłobki\nplacówki medyczne, apteki, punkty usługowe i gastronomiczne – pełna infrastruktura miejska,\ntereny zielone i rekreacyjne\nszybki dojazd do centrum miasta zarówno komunikacją miejską jak i samochodem\ndogodny wyjazd w każdym kierunku Krakowa\n\nMIESZKANIE:\n\nPowierzchnia 60,82m², na którą składają się:\n\nsalon z wyjściem na balkon\nosobna kuchnia z pełnym wyposażeniem (lodówka, płyta gazowa, piekarnik, pochłaniacz),\ndwie niezależne sypialnie – idealne na pokój dziecięcy, gabinet lub sypialnię główną,\nprzedpokój,\nłazienka z wanną,\nosobna toaleta,\nloggia 7,78m2\n\nDODATKOWE INFORMACJE:\n\nbalkon z widokiem na zieleń i panoramę Krakowa,\nogrzewanie i ciepła woda z sieci miejskiej (MPEC),\nklimatyzacja,\nszybki światłowodowy Internet,\ndo mieszkania przynależy miejsce postojowe w hali garażowej (2 piloty) oraz schowek o powierzchni 4,26m2,\nzadbany blok z windą, monitoringiem i domofonem,\nbrak gazu\n\nCENA: 1 129 000 zł obejmuje mieszkanie + miejsce w garażu + schowek', 'area': '61\xa0m²', 'rooms': '3', 'heating': 'miejskie', 'floor': '7/7', 'rent': '800 zł\xa0', 'building_condition': 'do zamieszkania', 'market': 'wtórny', 'ownership_form': 'pełna własność', 'available_from': '2025-09-01', 'offer_type': 'prywatny', 'additional_info': 'balkon\ngaraż/miejsce parkingowe\npom. użytkowe\noddzielna kuchnia'}]")
+    # a = 1
 if __name__ == "__main__":
     asyncio.run(main())
