@@ -1,5 +1,8 @@
 from Scrapers.base_scraper import BaseScraper
 from ScrappersConfiguration.otodom_configuration import OTODOM_CONFIGURATION
+from Api.send_data_client import SendDataClient
+
+
 class OtoDomScraper(BaseScraper):
     def __init__(self, city_name):
         self.city_name = city_name 
@@ -7,6 +10,7 @@ class OtoDomScraper(BaseScraper):
         self.configuration_selectors = OTODOM_CONFIGURATION["selectors"]
         self.configuration_offert_selectors = OTODOM_CONFIGURATION["selectors"]["offert"]
         self.json_data = None
+        self.send_data_client = SendDataClient()
         super().__init__(OTODOM_CONFIGURATION["url"],OTODOM_CONFIGURATION["cookies_button_selector"])
 
     async def run_oto_dom_scraper(self):
@@ -69,11 +73,14 @@ class OtoDomScraper(BaseScraper):
                     self.offer_page = await self.browser.new_page()
                     await self.offer_page.goto(self.url + href)
                     await self.accept_cookies(self.offer_page)
-                    # scrapp data
                     await self.scrap_data()
-                    #close offer_page
                     await self.offer_page.close()
-                    #focus on main page with offers list
+                    if len(self.offers) >= 2:
+                        await self.send_data_client.send_data_to_analysis(self.offers)
+                        self.offers.clear()
+                    self.offers.append(self.json_data)
+                    # await self.send_data_client.send_data_to_analysis(self.offers)
+
                     await self.page.bring_to_front()
         except Exception as e:
             self.logger.error(f"Failed to open offer: {e}. URL: {self.url}")
@@ -139,3 +146,4 @@ class OtoDomScraper(BaseScraper):
         except Exception as e:
             self.logger.error(f"Failed to get description: {e}. URL: {self.offer_page.url}")
             self.isSuccess = False
+    
