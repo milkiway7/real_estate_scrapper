@@ -75,16 +75,15 @@ class OtoDomScraper(BaseScraper):
                     await self.accept_cookies(self.offer_page)
                     await self.scrap_data()
                     await self.offer_page.close()
-                    if len(self.offers) >= 2:
-                        await self.send_data_client.send_data_to_analysis(self.offers)
-                        self.offers.clear()
-                    self.offers.append(self.json_data)
-                    # await self.send_data_client.send_data_to_analysis(self.offers)
+                    # if len(self.offers) >= 2:
+                    #     await self.send_data_client.send_data_to_analysis(self.offers)
+                    #     self.offers.clear()
+                    # self.offers.append(self.json_data)
 
                     await self.page.bring_to_front()
         except Exception as e:
             self.logger.error(f"Failed to open offer: {e}. URL: {self.url}")
-            self.isSuccess = False
+            
 
     async def is_next_page_button_visible(self):
         try:
@@ -92,7 +91,6 @@ class OtoDomScraper(BaseScraper):
             return await next_button.is_visible()
         except Exception as e:
             self.logger.error(f"Failed to check next page button visibility: {e}. URL: {self.url}")
-            self.isSuccess = False
         
     async def go_to_next_page(self):
         try:
@@ -103,7 +101,6 @@ class OtoDomScraper(BaseScraper):
                 await self.wait_for_element()
         except Exception as e:
             self.logger.error(f"Failed to go to next page: {e}. URL: {self.url}")
-            self.isSuccess = False
 
     async def scrap_data(self):
         try:
@@ -127,7 +124,6 @@ class OtoDomScraper(BaseScraper):
             # Add more fields as needed
         except Exception as e:
             self.logger.error(f"Failed to scrape data: {e}. URL: {self.offer_page.url}")
-            self.isSuccess = False
 
     async def get_details_info(self):
         try:
@@ -137,7 +133,6 @@ class OtoDomScraper(BaseScraper):
                 self.json_data[detail] = detail_value
         except Exception as e:
             self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")
-            self.isSuccess = False
     
     async def get_description(self):
         try:
@@ -145,5 +140,4 @@ class OtoDomScraper(BaseScraper):
             return description
         except Exception as e:
             self.logger.error(f"Failed to get description: {e}. URL: {self.offer_page.url}")
-            self.isSuccess = False
     

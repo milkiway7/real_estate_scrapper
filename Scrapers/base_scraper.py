@@ -20,7 +20,6 @@ class BaseScraper(ABC):
         for attempt in range(1, 4):
             try:
                 async with async_playwright() as p_wright:
-                    # Launch the browser
                     await self.open_browser(p_wright)
                     self.page_setup()
                     await self.accept_cookies(self.page)
@@ -34,7 +33,6 @@ class BaseScraper(ABC):
                         elapsed = end - start
                         self.logger.info(f"Scraping completed successfully for {self.city_name}, time elapsed:{elapsed.total_seconds() / 60:.2f} min. URL: {self.url}")
                         await self.close_browser()
-
                         break  # Exit the loop if successful
                     else:
                         end = datetime.now()
@@ -71,7 +69,7 @@ class BaseScraper(ABC):
             await self.browser.close()
             self.browser = None
         else:
-            print("Browser is not open.")
+            self.logger.error("Browser is not open.")
     
     def page_setup(self):
         try:
