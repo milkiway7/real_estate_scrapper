@@ -75,16 +75,14 @@ class OtoDomScraper(BaseScraper):
                     await self.accept_cookies(self.offer_page)
                     await self.scrap_data()
                     await self.offer_page.close()
-                    # if len(self.offers) >= 2:
-                    #     await self.send_data_client.send_data_to_analysis(self.offers)
-                    #     self.offers.clear()
-                    # self.offers.append(self.json_data)
-
+                    if len(self.offers) >= 2:
+                        await self.send_data_client.send_data_to_analysis(self.offers)
+                        self.offers.clear()
+                    self.offers.append(self.json_data)
                     await self.page.bring_to_front()
         except Exception as e:
             self.logger.error(f"Failed to open offer: {e}. URL: {self.url}")
             
-
     async def is_next_page_button_visible(self):
         try:
             next_button = self.page.locator(self.configuration_selectors["next_page_button"])

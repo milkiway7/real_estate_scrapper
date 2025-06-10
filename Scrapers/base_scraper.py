@@ -15,7 +15,6 @@ class BaseScraper(ABC):
         self.logger = get_logger(self.__class__.__name__)
 
     async def run_scraper(self):
-        # Retry 3 times if the scraper fails
         start = datetime.now()
         for attempt in range(1, 4):
             try:
@@ -27,7 +26,6 @@ class BaseScraper(ABC):
                     await self.filter_results()
                     await self.wait_for_element()
                     await self.scrape_offers()
-                # RETURN BOOL OR STH TO CHECK IF REALLY COMPLETED BCS NOW IT LOG SUCCES EVEN IF ERROR
                     if self.isSuccess:
                         end = datetime.now()
                         elapsed = end - start
@@ -65,11 +63,12 @@ class BaseScraper(ABC):
         await self.page.wait_for_timeout(1500)  
 
     async def close_browser(self):
-        if self.browser:
-            await self.browser.close()
-            self.browser = None
-        else:
-            self.logger.error("Browser is not open.")
+        try:
+            if self.browser:
+                await self.browser.close()
+                self.browser = None
+        except Exception as e:
+            self.logger.error(f"Failed to close browser: {e}. URL: {self.url}")
     
     def page_setup(self):
         try:
@@ -82,7 +81,6 @@ class BaseScraper(ABC):
     async def select_city(self, city_name):
         """
         Abstract method to select a city on the page.
-        Implemented in the derived class.
         """
         pass
     
@@ -90,7 +88,6 @@ class BaseScraper(ABC):
     async def filter_results(self):
         """
         Abstract method to filter results on the page.
-        Implemented in the derived class.
         """
         pass
     
@@ -98,6 +95,5 @@ class BaseScraper(ABC):
     async def scrape_offers(self):
         """
         Abstract method to scrape offers from the page.
-        Implemented in the derived class.
         """
         pass
