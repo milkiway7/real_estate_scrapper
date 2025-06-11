@@ -1,9 +1,13 @@
 import httpx
 from Helpers.logger import get_logger
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 class SendDataClient:
     def __init__(self):
-        self.base_url = "http://127.0.0.1:8000/analyze"
+        self.base_url = os.getenv("DATA_ANALYSIS_URL")
         self.timeout = httpx.Timeout(15.0)
         self.headers = {"Content-Type": "application/json"}
         self.logger = get_logger(self.__class__.__name__)
