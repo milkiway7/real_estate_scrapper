@@ -1,5 +1,3 @@
-abc
-playwrhight
+playwright
 httpx
-asyncio
 python-dotenv
