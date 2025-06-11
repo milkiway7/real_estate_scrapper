@@ -1,5 +1,5 @@
 import asyncio
-from Scrapers.oto_dom_scrapper import OtoDomScraper
+from Scrappers.oto_dom_scrapper import OtoDomScraper
 from Helpers.logger import get_logger
 
 async def main():
