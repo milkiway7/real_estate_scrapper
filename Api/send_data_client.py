@@ -15,6 +15,9 @@ class SendDataClient:
     async def send_data_to_analysis(self, data):
         async with httpx.AsyncClient(timeout=self.timeout) as client:
             try:
+                self.logger.info(f"Sending data to the analysis endpoint: {self.base_url}")
+                if not self.base_url:
+                    raise ValueError("Base URL for data analysis is not set in environment variables.")
                 response = await client.post(self.base_url, json=data, headers=self.headers)
                 response.raise_for_status()
                 self.logger.info(f"Data sent successfully to the analysis endpoint. Status code: {response.status_code}")

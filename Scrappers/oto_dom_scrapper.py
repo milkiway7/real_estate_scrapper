@@ -66,15 +66,21 @@ class OtoDomScraper(BaseScraper):
             offers_count = await offers_items.count()
             for offer_index in range(offers_count):
                 offer = offers_items.nth(offer_index)
+                self.logger.info(f"Offers count: {offers_count}")
                 anchor = offer.locator("a").first
                 if await anchor.is_visible():
                     await offer.scroll_into_view_if_needed()
+                    self.logger.info(f"Scroll to offer")
                     href = await anchor.first.get_attribute("href")
                     self.offer_page = await self.browser.new_page()
+                    self.logger.info(f"Opening new page: {href}")
                     await self.offer_page.goto(self.url + href)
+                    self.logger.info(f"Offer page opened: {self.offer_page.url}")
                     await self.accept_cookies(self.offer_page)
+                    self.logger.info(f"Accepting cookies on offer page: {self.offer_page.url}")
                     await self.scrap_data()
                     await self.offer_page.close()
+                    self.logger.info(f"Offer page closed: {self.offer_page.url}")
                     if len(self.offers) >= 2:
                         await self.send_data_client.send_data_to_analysis(self.offers)
                         self.offers.clear()
