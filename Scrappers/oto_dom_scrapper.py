@@ -11,6 +11,8 @@ class OtoDomScraper(BaseScraper):
         self.configuration_offert_selectors = OTODOM_CONFIGURATION["selectors"]["offert"]
         self.json_data = None
         self.send_data_client = SendDataClient()
+        self.page_number = 1
+        self.scrapped_offers = 0
         super().__init__(OTODOM_CONFIGURATION["url"],OTODOM_CONFIGURATION["cookies_button_selector"])
 
     async def run_oto_dom_scraper(self):
@@ -57,6 +59,9 @@ class OtoDomScraper(BaseScraper):
                         break
                     if list == lists_count - 1:
                         await self.go_to_next_page()
+                        self.page_number += 1
+                        self.logger.info(f"Scrapped offers count: {self.scrapped_offers}")
+                        self.logger.info(f"Current page number: {self.page_number}")
         except Exception as e:
             self.logger.error(f"Failed to run offers scrape loop: {e}. URL: {self.url}")
             self.isSuccess = False
@@ -81,6 +86,7 @@ class OtoDomScraper(BaseScraper):
                     await self.scrap_data()
                     await self.offer_page.close()
                     self.logger.info(f"Offer page closed: {self.offer_page.url}")
+                    self.scrapped_offers += 1
                     if len(self.offers) >= 2:
                         await self.send_data_client.send_data_to_analysis(self.offers)
                         self.offers.clear()

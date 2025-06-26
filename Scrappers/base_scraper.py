@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from playwright.async_api  import async_playwright
+from playwright.async_api import async_playwright
 from Helpers.logger import get_logger
 import asyncio  
 from datetime import datetime
