@@ -1,13 +1,11 @@
 import httpx
 from Helpers.logger import get_logger
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
 
 class SendDataClient:
     def __init__(self):
-        self.base_url = os.getenv("DATA_ANALYSIS_URL")
+        self.base_url = os.getenv("DATA_ANALYSIS_URL") + "/analyze"
         self.timeout = httpx.Timeout(15.0)
         self.headers = {"Content-Type": "application/json"}
         self.logger = get_logger(self.__class__.__name__)
@@ -17,7 +15,7 @@ class SendDataClient:
             try:
                 self.logger.info(f"Sending data to the analysis endpoint: {self.base_url}")
                 if not self.base_url:
-                    raise ValueError("Base URL for data analysis is not set in environment variables.")
+                    self.logger.error("Base URL for data analysis is not set in environment variables.")
                 response = await client.post(self.base_url, json=data, headers=self.headers)
                 response.raise_for_status()
                 self.logger.info(f"Data sent successfully to the analysis endpoint. Status code: {response.status_code}")

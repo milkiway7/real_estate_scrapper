@@ -1,3 +1,6 @@
+uvicorn
+httpx
+fastapi
 playwright
 httpx
 python-dotenv

@@ -23,8 +23,9 @@ class BaseScraper(ABC):
                     self.page_setup()
                     await self.accept_cookies(self.page)
                     await self.select_city(self.city_name)
-                    await self.filter_results()
+                    # await self.filter_results()
                     await self.wait_for_element()
+                    await asyncio.sleep(5)
                     await self.scrape_offers()
                     if self.isSuccess:
                         end = datetime.now()
@@ -97,3 +98,13 @@ class BaseScraper(ABC):
         Abstract method to scrape offers from the page.
         """
         pass
+
+    async def check_offer(self, url):
+        try:
+            async with async_playwright() as p_wright:
+                await self.open_browser(p_wright)
+                self.page_setup()
+                await self.page.goto(url)
+        except Exception as e:
+            self.logger.error(f"Failed to check offer: {e}. URL: {url}")
+            return None

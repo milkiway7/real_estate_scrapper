@@ -1,7 +1,6 @@
 from Scrappers.base_scraper import BaseScraper
 from ScrappersConfiguration.otodom_configuration import OTODOM_CONFIGURATION
-from Api.send_data_client import SendDataClient
-
+from DataClient.send_data_client import SendDataClient
 
 class OtoDomScraper(BaseScraper):
     def __init__(self, city_name):
@@ -28,7 +27,7 @@ class OtoDomScraper(BaseScraper):
             await city_input.press("Enter")
             await self.page.keyboard.press("Escape")
             await self.wait_for_element() 
-            await self.page.locator(self.configuration_selectors["search_button"]).click()
+            await self.page.locator(self.configuration_selectors["search_button"]).click(timeout=5000)
         except Exception as e:
             self.logger.error(f"Failed to select city: {e}. URL: {self.url}")
             self.isSuccess = False
@@ -46,61 +45,62 @@ class OtoDomScraper(BaseScraper):
 
     async def scrape_offers(self):
         try:
-            next_page_button_is_visible = await self.is_next_page_button_visible()
-            while next_page_button_is_visible:
-                offers_lists = self.page.locator(self.configuration_selectors["offets_list"])
-                lists_count = await offers_lists.count()
-                for list in range(lists_count):
-                    current_list = offers_lists.nth(list)
-                    offers_items = current_list.locator(self.configuration_selectors["offer_container"])
-                    await self.open_offers(offers_items)
-                    next_page_button_is_visible = await self.is_next_page_button_visible()
-                    if not next_page_button_is_visible:
-                        break
-                    if list == lists_count - 1:
-                        await self.go_to_next_page()
-                        self.page_number += 1
-                        self.logger.info(f"Scrapped offers count: {self.scrapped_offers}")
-                        self.logger.info(f"Current page number: {self.page_number}")
+            next_page_button_is_active = await self.is_next_page_button_active()
+            while next_page_button_is_active:
+                await self.open_offers()
+                next_page_button_is_active = await self.is_next_page_button_active()
+                if not next_page_button_is_active:
+                    break
+                await self.go_to_next_page()
+                self.page_number += 1
         except Exception as e:
             self.logger.error(f"Failed to run offers scrape loop: {e}. URL: {self.url}")
             self.isSuccess = False
         
-    async def open_offers(self, offers_items):
+    async def open_offers(self):
         try:
-            offers_count = await offers_items.count()
-            for offer_index in range(offers_count):
-                offer = offers_items.nth(offer_index)
-                self.logger.info(f"Offers count: {offers_count}")
-                anchor = offer.locator("a").first
-                if await anchor.is_visible():
-                    await offer.scroll_into_view_if_needed()
-                    self.logger.info(f"Scroll to offer")
-                    href = await anchor.first.get_attribute("href")
-                    self.offer_page = await self.browser.new_page()
-                    self.logger.info(f"Opening new page: {href}")
-                    await self.offer_page.goto(self.url + href)
-                    self.logger.info(f"Offer page opened: {self.offer_page.url}")
-                    await self.accept_cookies(self.offer_page)
-                    self.logger.info(f"Accepting cookies on offer page: {self.offer_page.url}")
-                    await self.scrap_data()
-                    await self.offer_page.close()
-                    self.logger.info(f"Offer page closed: {self.offer_page.url}")
-                    self.scrapped_offers += 1
-                    if len(self.offers) >= 2:
-                        await self.send_data_client.send_data_to_analysis(self.offers)
-                        self.offers.clear()
-                    self.offers.append(self.json_data)
-                    await self.page.bring_to_front()
+            links = await self.page.evaluate("""
+                () => {
+                    const links = [...document.querySelectorAll('a[href^="/pl/oferta/"]')]
+                        .map(a => new URL(a.getAttribute('href'), location.origin).href);
+                    return [...new Set(links)];
+                }
+            """)
+            for link in links:
+                self.offer_page = await self.browser.new_page()
+                self.logger.info(f"Opening new page: {link}")
+                await self.offer_page.goto(link)
+                self.logger.info(f"Offer page opened: {self.offer_page.url}")
+                await self.accept_cookies(self.offer_page)
+                self.logger.info(f"Accepting cookies on offer page: {self.offer_page.url}")
+                await self.scrap_data()
+                await self.offer_page.close()
+                self.logger.info(f"Offer page closed: {self.offer_page.url}")
+                self.scrapped_offers += 1
+                if len(self.offers) >= 2:
+                    await self.send_data_client.send_data_to_analysis(self.offers)
+                    self.offers.clear()
+                self.offers.append(self.json_data)
+                await self.page.bring_to_front()
         except Exception as e:
             self.logger.error(f"Failed to open offer: {e}. URL: {self.url}")
-            
-    async def is_next_page_button_visible(self):
+                
+    async def is_next_page_button_active(self) -> bool:
         try:
             next_button = self.page.locator(self.configuration_selectors["next_page_button"])
-            return await next_button.is_visible()
+            if not await next_button.is_visible():
+                return False
+
+            # Sprawdź atrybut aria-disabled
+            aria_disabled = await next_button.get_attribute("aria-disabled")
+            disabled = await next_button.get_attribute("disabled")
+
+            if aria_disabled == "true" or disabled is not None:
+                return False
+            return True
         except Exception as e:
-            self.logger.error(f"Failed to check next page button visibility: {e}. URL: {self.url}")
+            self.logger.error(f"Failed to check next page button state: {e}. URL: {self.url}")
+            return False
         
     async def go_to_next_page(self):
         try:
@@ -138,8 +138,14 @@ class OtoDomScraper(BaseScraper):
     async def get_details_info(self):
         try:
             for detail in self.configuration_offert_selectors["details_table"]:
-                detail_value_label = self.offer_page.locator("p", has_text=self.configuration_offert_selectors["details_table"][detail])
-                detail_value = await detail_value_label.locator("xpath=following-sibling::p[1]").first.inner_text()
+                label_text = self.configuration_offert_selectors["details_table"][detail]  # np. "Powierzchnia:"
+                detail_value_label = (
+                    self.offer_page
+                    .locator('[data-sentry-element="ItemGridContainer"]')
+                    .get_by_text(label_text, exact=True)
+                    .first
+                )
+                detail_value = await detail_value_label.locator('xpath=following-sibling::*[1]').first.inner_text()
                 self.json_data[detail] = detail_value
         except Exception as e:
             self.logger.error(f"Failed to get details info: {e}. URL: {self.offer_page.url}")

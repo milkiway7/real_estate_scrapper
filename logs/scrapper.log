@@ -1,0 +1,388 @@
+2025-08-29 18:55:50 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:55:50 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:56:03 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:56:03 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:56:17 - SendDataClient - INFO - Sending data to the analysis endpoint: http://122025-08-29 18:56:18 - 2025-08-29 18:56:18 - SendDataClient - INFO - Data sent successfully to the analysi2025-08-29 18:56:29 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:56:41 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:56:54 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:07 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:17 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:28 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:38 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:47 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:57:58 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:07 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:17 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:27 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:38 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:48 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:58:57 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:59:09 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:59:18 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:59:28 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:59:38 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 18:59:59 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 19:00:14 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 19:00:27 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+2025-08-29 19:00:38 - httpx - INFO - HTTP Request: POST http://127.0.0.1:8000/analyze "HTTP/1.1 200 OK"
+.0.0.1:8000/analyze
+2025-08-29 18:58:17 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:58:27 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:58:27 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:58:38 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:58:38 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:58:48 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:58:48 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:58:57 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:58:57 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:59:08 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:59:09 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:59:17 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:59:18 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:59:28 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:59:28 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:59:38 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:59:38 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 18:59:59 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 18:59:59 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 19:00:14 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 19:00:14 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 19:00:27 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 19:00:27 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+2025-08-29 19:00:38 - SendDataClient - INFO - Sending data to the analysis endpoint: http://127.0.0.1:8000/analyze
+2025-08-29 19:00:38 - SendDataClient - INFO - Data sent successfully to the analysis endpoint. Status code: 200
+Imbramowski, Prądnik Biał").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-47m2-balkon-bezposrednio-ID4unj4
+2025-08-29 18:56:16 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-47m2-balkon-bezposrednio-ID4unj4
+2025-08-29 18:56:18 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/skalka-residence-ID4w9Wb
+2025-08-29 18:56:21 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/inwestycja/skalka-residence-ID4w9Wb
+2025-08-29 18:56:22 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/inwestycja/skalka-residence-ID4w9Wb
+2025-08-29 18:56:22 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopo…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-1ioghsz e1f6jujr4">…</a> aka get_by_role("main").locator("div").filter(has_text="WróćUdostępnijSkałka").get_by_role("link")
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/inwestycja/skalka-residence-ID4w9Wb
+2025-08-29 18:56:23 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/inwestycja/skalka-residence-ID4w9Wb
+2025-08-29 18:56:23 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/5-pokojowe-mieszkanie-126m2-3-balkony-ID4w9WR
+2025-08-29 18:56:27 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/5-pokojowe-mieszkanie-126m2-3-balkony-ID4w9WR
+2025-08-29 18:56:27 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/5-pokojowe-mieszkanie-126m2-3-balkony-ID4w9WR
+2025-08-29 18:56:28 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopo…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/5-pokojowe-mieszkanie-126m2-3-balkony-ID4w9WR
+2025-08-29 18:56:28 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/5-pokojowe-mieszkanie-126m2-3-balkony-ID4w9WR
+2025-08-29 18:56:29 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-59m2-2-balkony-ID4w9WL
+2025-08-29 18:56:33 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-59m2-2-balkony-ID4w9WL
+2025-08-29 18:56:34 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-59m2-2-balkony-ID4w9WL
+2025-08-29 18:56:34 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopo…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-59m2-2-balkony-ID4w9WL
+2025-08-29 18:56:34 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-59m2-2-balkony-ID4w9WL
+2025-08-29 18:56:35 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-88m2-balkon-ID4w9WO
+2025-08-29 18:56:39 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-88m2-balkon-ID4w9WO
+2025-08-29 18:56:39 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-88m2-balkon-ID4w9WO
+2025-08-29 18:56:39 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopo…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Kapelanka, Zakrzówek, Dębniki, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-88m2-balkon-ID4w9WO
+2025-08-29 18:56:40 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-88m2-balkon-ID4w9WO
+2025-08-29 18:56:41 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-taras-ID4sU3k
+2025-08-29 18:56:44 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-taras-ID4sU3k
+2025-08-29 18:56:45 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-taras-ID4sU3k
+2025-08-29 18:56:47 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-taras-ID4sU3k
+2025-08-29 18:56:47 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-ID4odkI
+2025-08-29 18:56:51 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-ID4odkI
+2025-08-29 18:56:51 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-ID4odkI
+2025-08-29 18:56:53 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/apartamenty-przy-nowym-kleparzu-dluga-82-ID4odkI
+2025-08-29 18:56:55 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-mieszkania-na-jednym-kw-widok-na-park-taras-ID4xTZF
+2025-08-29 18:56:58 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-mieszkania-na-jednym-kw-widok-na-park-taras-ID4xTZF
+2025-08-29 18:56:59 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-mieszkania-na-jednym-kw-widok-na-park-taras-ID4xTZF
+2025-08-29 18:57:00 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-mieszkania-na-jednym-kw-widok-na-park-taras-ID4xTZF
+2025-08-29 18:57:00 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/krowodrza-park-ID4ui3n
+2025-08-29 18:57:04 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/inwestycja/krowodrza-park-ID4ui3n
+2025-08-29 18:57:05 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/inwestycja/krowodrza-park-ID4ui3n
+2025-08-29 18:57:05 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Misjonarska, Łobzów, Krowodrza, Kraków, małop…</a> aka get_by_role("link", name="ul. Misjonarska, Łobzów, Krowodrza, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-1ioghsz e1f6jujr4">…</a> aka get_by_role("main").locator("div").filter(has_text="WróćUdostępnijKrowodrza").get_by_role("link")
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/inwestycja/krowodrza-park-ID4ui3n
+2025-08-29 18:57:06 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/inwestycja/krowodrza-park-ID4ui3n
+2025-08-29 18:57:07 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-66m2-balkon-ID4ui9V
+2025-08-29 18:57:10 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-66m2-balkon-ID4ui9V
+2025-08-29 18:57:11 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-66m2-balkon-ID4ui9V
+2025-08-29 18:57:11 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Misjonarska, Łobzów, Krowodrza, Kraków, małop…</a> aka get_by_role("link", name="ul. Misjonarska, Łobzów,").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Misjonarska, Łobzów,").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-66m2-balkon-ID4ui9V
+2025-08-29 18:57:11 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-66m2-balkon-ID4ui9V
+2025-08-29 18:57:12 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-66m2-2-loggie-ID4ui8d
+2025-08-29 18:57:15 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-66m2-2-loggie-ID4ui8d
+2025-08-29 18:57:16 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-66m2-2-loggie-ID4ui8d
+2025-08-29 18:57:16 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Misjonarska, Łobzów, Krowodrza, Kraków, małop…</a> aka get_by_role("link", name="ul. Misjonarska, Łobzów,").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Misjonarska, Łobzów,").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-66m2-2-loggie-ID4ui8d
+2025-08-29 18:57:17 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-66m2-2-loggie-ID4ui8d
+2025-08-29 18:57:18 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/federowicza-ruczaj-park-ID4uhIL
+2025-08-29 18:57:20 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/inwestycja/federowicza-ruczaj-park-ID4uhIL
+2025-08-29 18:57:21 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/inwestycja/federowicza-ruczaj-park-ID4uhIL
+2025-08-29 18:57:22 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">Federowicza, Skotniki, Dębniki, Kraków, małopolsk…</a> aka get_by_role("link", name="Federowicza, Skotniki, Dębniki, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-1ioghsz e1f6jujr4">…</a> aka get_by_role("main").locator("div").filter(has_text="WróćUdostępnijFederowicza -").get_by_role("link")
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/inwestycja/federowicza-ruczaj-park-ID4uhIL
+2025-08-29 18:57:22 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/inwestycja/federowicza-ruczaj-park-ID4uhIL
+2025-08-29 18:57:22 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-53m2-ogrodek-bez-prowizji-ID4uhK8
+2025-08-29 18:57:26 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-53m2-ogrodek-bez-prowizji-ID4uhK8
+2025-08-29 18:57:26 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-53m2-ogrodek-bez-prowizji-ID4uhK8
+2025-08-29 18:57:27 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">Federowicza, Skotniki, Dębniki, Kraków, małopolsk…</a> aka get_by_role("link", name="Federowicza, Skotniki, Dę").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="Federowicza, Skotniki, Dę").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-53m2-ogrodek-bez-prowizji-ID4uhK8
+2025-08-29 18:57:27 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-53m2-ogrodek-bez-prowizji-ID4uhK8
+2025-08-29 18:57:28 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-73m2-loggia-bezposrednio-ID4uhJu
+2025-08-29 18:57:31 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-73m2-loggia-bezposrednio-ID4uhJu
+2025-08-29 18:57:32 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-73m2-loggia-bezposrednio-ID4uhJu
+2025-08-29 18:57:32 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">Federowicza, Skotniki, Dębniki, Kraków, małopolsk…</a> aka get_by_role("link", name="Federowicza, Skotniki, Dę").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="Federowicza, Skotniki, Dę").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-73m2-loggia-bezposrednio-ID4uhJu
+2025-08-29 18:57:32 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/4-pokojowe-mieszkanie-73m2-loggia-bezposrednio-ID4uhJu
+2025-08-29 18:57:33 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-40m2-loggia-bezposrednio-ID4uoml
+2025-08-29 18:57:36 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-40m2-loggia-bezposrednio-ID4uoml
+2025-08-29 18:57:36 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-40m2-loggia-bezposrednio-ID4uoml
+2025-08-29 18:57:37 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Do Wilgi, Cegielniana, Łagiewniki-Borek Fałęc…</a> aka get_by_role("link", name="ul. Do Wilgi, Cegielniana, Ł").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Do Wilgi, Cegielniana, Ł").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-40m2-loggia-bezposrednio-ID4uoml
+2025-08-29 18:57:37 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-40m2-loggia-bezposrednio-ID4uoml
+2025-08-29 18:57:38 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/nowe-mieszkanie-2-pokojowe-z-balkonem-oferta-bez-posrednikow-ID4xTYV
+2025-08-29 18:57:41 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/nowe-mieszkanie-2-pokojowe-z-balkonem-oferta-bez-posrednikow-ID4xTYV
+2025-08-29 18:57:41 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/nowe-mieszkanie-2-pokojowe-z-balkonem-oferta-bez-posrednikow-ID4xTYV
+2025-08-29 18:57:42 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/nowe-mieszkanie-2-pokojowe-z-balkonem-oferta-bez-posrednikow-ID4xTYV
+2025-08-29 18:57:42 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/apartamenty-gdynska-ID4pSqW
+2025-08-29 18:57:45 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/inwestycja/apartamenty-gdynska-ID4pSqW
+2025-08-29 18:57:46 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/inwestycja/apartamenty-gdynska-ID4pSqW
+2025-08-29 18:57:46 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-1ioghsz e1f6jujr4">…</a> aka get_by_role("main").locator("div").filter(has_text="WróćUdostępnijApartamenty Gdy").get_by_role("link")
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/inwestycja/apartamenty-gdynska-ID4pSqW
+2025-08-29 18:57:46 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/inwestycja/apartamenty-gdynska-ID4pSqW
+2025-08-29 18:57:48 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/4-pok-z-rabatem-900-zl-m2-i-dwa-m-post-gratis-ID4pStD
+2025-08-29 18:57:51 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/4-pok-z-rabatem-900-zl-m2-i-dwa-m-post-gratis-ID4pStD
+2025-08-29 18:57:51 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/4-pok-z-rabatem-900-zl-m2-i-dwa-m-post-gratis-ID4pStD
+2025-08-29 18:57:51 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/4-pok-z-rabatem-900-zl-m2-i-dwa-m-post-gratis-ID4pStD
+2025-08-29 18:57:52 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/4-pok-z-rabatem-900-zl-m2-i-dwa-m-post-gratis-ID4pStD
+2025-08-29 18:57:52 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-pok-z-rabatem-900-zl-m2-i-m-post-gratis-ID4pSts
+2025-08-29 18:57:55 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-pok-z-rabatem-900-zl-m2-i-m-post-gratis-ID4pSts
+2025-08-29 18:57:56 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-pok-z-rabatem-900-zl-m2-i-m-post-gratis-ID4pSts
+2025-08-29 18:57:56 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/3-pok-z-rabatem-900-zl-m2-i-m-post-gratis-ID4pSts
+2025-08-29 18:57:57 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-pok-z-rabatem-900-zl-m2-i-m-post-gratis-ID4pSts
+2025-08-29 18:57:58 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pok-z-rabatem-1000-zl-m2-sprawdz-promocje-ID4pStu
+2025-08-29 18:58:02 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pok-z-rabatem-1000-zl-m2-sprawdz-promocje-ID4pStu
+2025-08-29 18:58:02 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pok-z-rabatem-1000-zl-m2-sprawdz-promocje-ID4pStu
+2025-08-29 18:58:02 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Gdyńska, Prądnik Biały, Prądnik Biały, Kraków, małopolskie", exact=True).nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pok-z-rabatem-1000-zl-m2-sprawdz-promocje-ID4pStu
+2025-08-29 18:58:03 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pok-z-rabatem-1000-zl-m2-sprawdz-promocje-ID4pStu
+2025-08-29 18:58:03 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/osiedle-pasteura-etap-iv-ID4ui3p
+2025-08-29 18:58:06 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/inwestycja/osiedle-pasteura-etap-iv-ID4ui3p
+2025-08-29 18:58:06 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/inwestycja/osiedle-pasteura-etap-iv-ID4ui3p
+2025-08-29 18:58:06 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Ludwika Pasteura, Prądnik Biały, Prądnik Biał…</a> aka get_by_role("link", name="ul. Ludwika Pasteura, Prądnik").first
+    2) <a href="#map" class="css-1ioghsz e1f6jujr4">…</a> aka get_by_role("main").locator("div").filter(has_text="WróćUdostępnijOsiedle").get_by_role("link")
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/inwestycja/osiedle-pasteura-etap-iv-ID4ui3p
+2025-08-29 18:58:07 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/inwestycja/osiedle-pasteura-etap-iv-ID4ui3p
+2025-08-29 18:58:08 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-54m2-balkon-ID4ujln
+2025-08-29 18:58:11 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-54m2-balkon-ID4ujln
+2025-08-29 18:58:11 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-54m2-balkon-ID4ujln
+2025-08-29 18:58:12 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Ludwika Pasteura, Prądnik Biały, Prądnik Biał…</a> aka get_by_role("link", name="ul. Ludwika Pasteura, Prądnik").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Ludwika Pasteura, Prądnik").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-54m2-balkon-ID4ujln
+2025-08-29 18:58:12 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/3-pokojowe-mieszkanie-54m2-balkon-ID4ujln
+2025-08-29 18:58:12 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bezposrednio-ID4ujli
+2025-08-29 18:58:15 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bezposrednio-ID4ujli
+2025-08-29 18:58:15 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bezposrednio-ID4ujli
+2025-08-29 18:58:16 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Ludwika Pasteura, Prądnik Biały, Prądnik Biał…</a> aka get_by_role("link", name="ul. Ludwika Pasteura, Prądnik").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Ludwika Pasteura, Prądnik").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bezposrednio-ID4ujli
+2025-08-29 18:58:16 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bezposrednio-ID4ujli
+2025-08-29 18:58:17 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bez-prowizji-ID4v4Ij
+2025-08-29 18:58:20 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bez-prowizji-ID4v4Ij
+2025-08-29 18:58:21 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bez-prowizji-ID4v4Ij
+2025-08-29 18:58:21 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Edwarda Heila, Wola Duchacka, Podgórze Duchac…</a> aka get_by_role("link", name="ul. Edwarda Heila, Wola").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Edwarda Heila, Wola").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bez-prowizji-ID4v4Ij
+2025-08-29 18:58:21 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-38m2-balkon-bez-prowizji-ID4v4Ij
+2025-08-29 18:58:22 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/mieszkanie-5-pokojowe-dla-inwestora-lub-rodziny-ID4xTYW
+2025-08-29 18:58:25 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/mieszkanie-5-pokojowe-dla-inwestora-lub-rodziny-ID4xTYW
+2025-08-29 18:58:25 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/mieszkanie-5-pokojowe-dla-inwestora-lub-rodziny-ID4xTYW
+2025-08-29 18:58:26 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/mieszkanie-5-pokojowe-dla-inwestora-lub-rodziny-ID4xTYW
+2025-08-29 18:58:27 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/wspaniale-m-z-nowym-wyposazeniem-2pokoje-taras-ID4xRLg
+2025-08-29 18:58:32 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/wspaniale-m-z-nowym-wyposazeniem-2pokoje-taras-ID4xRLg
+2025-08-29 18:58:33 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/wspaniale-m-z-nowym-wyposazeniem-2pokoje-taras-ID4xRLg
+2025-08-29 18:58:33 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/wspaniale-m-z-nowym-wyposazeniem-2pokoje-taras-ID4xRLg
+2025-08-29 18:58:34 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pok-z-balkonem-9-pietro-mistrzejowice-ID4x6Pg
+2025-08-29 18:58:37 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pok-z-balkonem-9-pietro-mistrzejowice-ID4x6Pg
+2025-08-29 18:58:37 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pok-z-balkonem-9-pietro-mistrzejowice-ID4x6Pg
+2025-08-29 18:58:38 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pok-z-balkonem-9-pietro-mistrzejowice-ID4x6Pg
+2025-08-29 18:58:39 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/60m2-grzegorzki-ul-kotlarska-ID4xvdl
+2025-08-29 18:58:42 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/60m2-grzegorzki-ul-kotlarska-ID4xvdl
+2025-08-29 18:58:42 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/60m2-grzegorzki-ul-kotlarska-ID4xvdl
+2025-08-29 18:58:43 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/60m2-grzegorzki-ul-kotlarska-ID4xvdl
+2025-08-29 18:58:43 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/ciche-52m2-z-ogrodkiem-niedaleko-parku-wodnego-ID4xexV
+2025-08-29 18:58:46 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/ciche-52m2-z-ogrodkiem-niedaleko-parku-wodnego-ID4xexV
+2025-08-29 18:58:46 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/ciche-52m2-z-ogrodkiem-niedaleko-parku-wodnego-ID4xexV
+2025-08-29 18:58:47 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/ciche-52m2-z-ogrodkiem-niedaleko-parku-wodnego-ID4xexV
+2025-08-29 18:58:48 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/ruczaj-nowe-2-pok-bez-posrednikow-ID4vTBn
+2025-08-29 18:58:51 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/ruczaj-nowe-2-pok-bez-posrednikow-ID4vTBn
+2025-08-29 18:58:51 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/ruczaj-nowe-2-pok-bez-posrednikow-ID4vTBn
+2025-08-29 18:58:52 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/ruczaj-nowe-2-pok-bez-posrednikow-ID4vTBn
+2025-08-29 18:58:52 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-37m2-balkon-bez-prowizji-ID4upbA
+2025-08-29 18:58:56 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-37m2-balkon-bez-prowizji-ID4upbA
+2025-08-29 18:58:56 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-37m2-balkon-bez-prowizji-ID4upbA
+2025-08-29 18:58:56 - OtoDomScraper - ERROR - Failed to scrape data: Locator.inner_text: Error: strict mode violation: locator("a[href=\"#map\"]") resolved to 2 elements:
+    1) <a href="#map" class="ee8muul3 css-3s3npq">ul. Piasta Kołodzieja, Mistrzejowice, Mistrzejowi…</a> aka get_by_role("link", name="ul. Piasta Kołodzieja,").first
+    2) <a href="#map" class="css-4jdsdv e1l0kbtf1" data-sentry-element="StyledLink" data-sentry-source-file="MapLink.tsx">…</a> aka get_by_role("link", name="ul. Piasta Kołodzieja,").nth(1)
+
+Call log:
+  - waiting for locator("a[href=\"#map\"]")
+. URL: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-37m2-balkon-bez-prowizji-ID4upbA
+2025-08-29 18:58:57 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokojowe-mieszkanie-37m2-balkon-bez-prowizji-ID4upbA
+2025-08-29 18:58:58 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/krakow-olsza-ul-wlodkowica-ID4xMqA
+2025-08-29 18:59:01 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/krakow-olsza-ul-wlodkowica-ID4xMqA
+2025-08-29 18:59:01 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/krakow-olsza-ul-wlodkowica-ID4xMqA
+2025-08-29 18:59:03 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/krakow-olsza-ul-wlodkowica-ID4xMqA
+2025-08-29 18:59:04 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/rodzinne-mieszkanie-swietna-komunikacja-ID4xTXB
+2025-08-29 18:59:07 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/rodzinne-mieszkanie-swietna-komunikacja-ID4xTXB
+2025-08-29 18:59:07 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/rodzinne-mieszkanie-swietna-komunikacja-ID4xTXB
+2025-08-29 18:59:08 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/rodzinne-mieszkanie-swietna-komunikacja-ID4xTXB
+2025-08-29 18:59:09 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/osiedle-podwawelskie-komandosow-ID4xDgV
+2025-08-29 18:59:12 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/osiedle-podwawelskie-komandosow-ID4xDgV
+2025-08-29 18:59:12 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/osiedle-podwawelskie-komandosow-ID4xDgV
+2025-08-29 18:59:12 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/osiedle-podwawelskie-komandosow-ID4xDgV
+2025-08-29 18:59:13 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/przedsprzedaz-3-pokoje-prokocim-ID4xTXb
+2025-08-29 18:59:16 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/przedsprzedaz-3-pokoje-prokocim-ID4xTXb
+2025-08-29 18:59:16 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/przedsprzedaz-3-pokoje-prokocim-ID4xTXb
+2025-08-29 18:59:17 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/przedsprzedaz-3-pokoje-prokocim-ID4xTXb
+2025-08-29 18:59:18 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/podgorze-duze-2-pokojowe-ogrodek-dobry-dojazd-ID4xTXh
+2025-08-29 18:59:21 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/podgorze-duze-2-pokojowe-ogrodek-dobry-dojazd-ID4xTXh
+2025-08-29 18:59:21 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/podgorze-duze-2-pokojowe-ogrodek-dobry-dojazd-ID4xTXh
+2025-08-29 18:59:23 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/podgorze-duze-2-pokojowe-ogrodek-dobry-dojazd-ID4xTXh
+2025-08-29 18:59:23 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/przedsprzedaz-2-pokoje-prokocim-dobry-dojazd-ID4xTXf
+2025-08-29 18:59:26 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/przedsprzedaz-2-pokoje-prokocim-dobry-dojazd-ID4xTXf
+2025-08-29 18:59:27 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/przedsprzedaz-2-pokoje-prokocim-dobry-dojazd-ID4xTXf
+2025-08-29 18:59:28 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/przedsprzedaz-2-pokoje-prokocim-dobry-dojazd-ID4xTXf
+2025-08-29 18:59:29 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 18:59:32 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 18:59:32 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 18:59:33 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 18:59:33 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 18:59:36 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 18:59:37 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 18:59:37 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 18:59:43 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/ul-bagrowa-2-pokoje-aneks-taras-43-6m2-ID4xtfe
+2025-08-29 18:59:48 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/ul-bagrowa-2-pokoje-aneks-taras-43-6m2-ID4xtfe
+2025-08-29 18:59:48 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/ul-bagrowa-2-pokoje-aneks-taras-43-6m2-ID4xtfe
+2025-08-29 18:59:52 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/ul-bagrowa-2-pokoje-aneks-taras-43-6m2-ID4xtfe
+2025-08-29 18:59:53 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/kawalerka-osobna-sypialnia-189-tys-zl-ID4xonZ
+2025-08-29 18:59:57 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/kawalerka-osobna-sypialnia-189-tys-zl-ID4xonZ
+2025-08-29 18:59:57 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/kawalerka-osobna-sypialnia-189-tys-zl-ID4xonZ
+2025-08-29 18:59:58 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/kawalerka-osobna-sypialnia-189-tys-zl-ID4xonZ
+2025-08-29 19:00:00 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/dwupoziomowe-z-tarasem-88m2-po-podlodze-na-granicy-krakowa-po-remoncie-ID4x1Hu
+2025-08-29 19:00:03 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/dwupoziomowe-z-tarasem-88m2-po-podlodze-na-granicy-krakowa-po-remoncie-ID4x1Hu
+2025-08-29 19:00:03 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/dwupoziomowe-z-tarasem-88m2-po-podlodze-na-granicy-krakowa-po-remoncie-ID4x1Hu
+2025-08-29 19:00:05 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/dwupoziomowe-z-tarasem-88m2-po-podlodze-na-granicy-krakowa-po-remoncie-ID4x1Hu
+2025-08-29 19:00:06 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 19:00:09 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 19:00:10 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 19:00:12 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/promocja-2-pokoje-prokocim-zielen-dobry-dojazd-ID4xTXa
+2025-08-29 19:00:14 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 19:00:17 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 19:00:17 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 19:00:20 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/bardzo-fajne-os-widok-3-pok-56-73-m2-x-10p-ID4xDz0
+2025-08-29 19:00:20 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/os-avia-2-pok-46m-klimatyzacja-komfort-ID4x3E9
+2025-08-29 19:00:23 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/os-avia-2-pok-46m-klimatyzacja-komfort-ID4x3E9
+2025-08-29 19:00:24 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/os-avia-2-pok-46m-klimatyzacja-komfort-ID4x3E9
+2025-08-29 19:00:26 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/os-avia-2-pok-46m-klimatyzacja-komfort-ID4x3E9
+2025-08-29 19:00:27 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/63m-4-niezalezne-pokoje-osiedle-krakowiakow-ID4xjz0
+2025-08-29 19:00:30 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/63m-4-niezalezne-pokoje-osiedle-krakowiakow-ID4xjz0
+2025-08-29 19:00:31 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/63m-4-niezalezne-pokoje-osiedle-krakowiakow-ID4xjz0
+2025-08-29 19:00:31 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/63m-4-niezalezne-pokoje-osiedle-krakowiakow-ID4xjz0
+2025-08-29 19:00:32 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/stylowa-kawalerka-lea-219-30m-centrum-ID4xkxR
+2025-08-29 19:00:35 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/stylowa-kawalerka-lea-219-30m-centrum-ID4xkxR
+2025-08-29 19:00:36 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/stylowa-kawalerka-lea-219-30m-centrum-ID4xkxR
+2025-08-29 19:00:37 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/stylowa-kawalerka-lea-219-30m-centrum-ID4xkxR
+2025-08-29 19:00:38 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/2-pokoje-wyslouchow-oddzielna-kuchnia-ID4xteZ
+2025-08-29 19:00:41 - OtoDomScraper - INFO - Offer page opened: https://www.otodom.pl/pl/oferta/2-pokoje-wyslouchow-oddzielna-kuchnia-ID4xteZ
+2025-08-29 19:00:42 - OtoDomScraper - INFO - Accepting cookies on offer page: https://www.otodom.pl/pl/oferta/2-pokoje-wyslouchow-oddzielna-kuchnia-ID4xteZ
+2025-08-29 19:00:44 - OtoDomScraper - INFO - Offer page closed: https://www.otodom.pl/pl/oferta/2-pokoje-wyslouchow-oddzielna-kuchnia-ID4xteZ
+2025-08-29 19:00:44 - OtoDomScraper - INFO - Opening new page: https://www.otodom.pl/pl/oferta/wyjatkowe-mieszkanie-2-pokojowe-z-ogrodkiem-ID4vE22

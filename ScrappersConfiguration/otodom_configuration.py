@@ -9,8 +9,8 @@ OTODOM_CONFIGURATION = {
         "filter_button": '[data-cy="dropdown"]',
         "filter_newest": '#react-select-listingSorting-option-1',
         "offets_list": '[data-sentry-element="StyledList"]',
-        "offer_container": 'li article[data-cy="listing-item"] section',
-        "next_page_button": 'li[title="Go to next Page"]',
+        "offer_container": 'li article[data-sentry-component="AdvertCard"] section',
+        "next_page_button": 'a[title="Go to next Page"]',
         "offert":{
             "title": '[data-cy="adPageAdTitle"]',
             "address": 'a[href="#map"]',
