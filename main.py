@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 load_dotenv()
 import asyncio
-import sys
 from Scrappers.oto_dom_scrapper import OtoDomScraper
 from Helpers.logger import get_logger
 from DataClient.ScrappedDataTableClient import ScrappedDataTableClient

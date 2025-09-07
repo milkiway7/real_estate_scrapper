@@ -19,6 +19,7 @@ class SendDataClient:
                 response = await client.post(self.base_url, json=data, headers=self.headers)
                 response.raise_for_status()
                 self.logger.info(f"Data sent successfully to the analysis endpoint. Status code: {response.status_code}")
+                return response.json()
             except httpx.HTTPStatusError as e:
                 self.logger.error(f"HTTP error occurred: {e.response.status_code} - {e.response.text}")
 

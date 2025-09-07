@@ -70,18 +70,24 @@ class OtoDomScraper(BaseScraper):
                 self.offer_page = await self.browser.new_page()
                 self.logger.info(f"Opening new page: {link}")
                 await self.offer_page.goto(link)
+                await self.offer_page.wait_for_load_state('networkidle')
                 self.logger.info(f"Offer page opened: {self.offer_page.url}")
                 await self.accept_cookies(self.offer_page)
                 self.logger.info(f"Accepting cookies on offer page: {self.offer_page.url}")
-                await self.scrap_data()
+                scrap_data_is_success = await self.scrap_data()
                 await self.offer_page.close()
-                self.logger.info(f"Offer page closed: {self.offer_page.url}")
-                self.scrapped_offers += 1
-                if len(self.offers) >= 2:
-                    await self.send_data_client.send_data_to_analysis(self.offers)
-                    self.offers.clear()
-                self.offers.append(self.json_data)
-                await self.page.bring_to_front()
+                # tu dodaj pominięcie loop jeśli scrap data się nie powiedzie 
+                if scrap_data_is_success:
+                    self.logger.info(f"Offer page scrapped successfully: {self.offer_page.url}")
+                    self.scrapped_offers += 1
+                    if len(self.offers) >= 2:
+                        result = await self.send_data_client.send_data_to_analysis(self.offers)
+                        self.logger.info(f"Sent {len(self.offers)} to data analysis service. Result: {result}")
+                        self.offers.clear()
+                    self.offers.append(self.json_data)
+                    await self.page.bring_to_front()
+                else:
+                    self.logger.error(f"Scraping data failed for offer: {link}. Skipping to next offer.")
         except Exception as e:
             self.logger.error(f"Failed to open offer: {e}. URL: {self.url}")
                 
@@ -131,14 +137,16 @@ class OtoDomScraper(BaseScraper):
             # ADD COMPANY IF EXSIST
             
             await self.get_details_info()
+            return True
             # Add more fields as needed
         except Exception as e:
             self.logger.error(f"Failed to scrape data: {e}. URL: {self.offer_page.url}")
-
+            return False
+        
     async def get_details_info(self):
         try:
             for detail in self.configuration_offert_selectors["details_table"]:
-                label_text = self.configuration_offert_selectors["details_table"][detail]  # np. "Powierzchnia:"
+                label_text = self.configuration_offert_selectors["details_table"][detail] # e.g., "Liczba pokoi"
                 detail_value_label = (
                     self.offer_page
                     .locator('[data-sentry-element="ItemGridContainer"]')
